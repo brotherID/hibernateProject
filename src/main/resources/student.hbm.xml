@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.websystique.hibernate.model.Student" table="student">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="name"/>
+
+        <!-- ManyToOne mapping -->
+        <many-to-one name="university" column="university_id" class="com.websystique.hibernate.model.University"/>
+    </class>
+</hibernate-mapping>

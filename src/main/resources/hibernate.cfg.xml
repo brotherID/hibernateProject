@@ -12,7 +12,9 @@
         <property name="show_sql">true</property>
         <property name="format_sql">false</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
-        <mapping class="com.websystique.hibernate.model.Student"/>
-        <mapping class="com.websystique.hibernate.model.University"/>          
+    
+        <!-- Mappings (path to the XML mapping files) -->
+        <mapping resource="university.hbm.xml"/>
+        <mapping resource="student.hbm.xml"/>      
     </session-factory>
 </hibernate-configuration>
